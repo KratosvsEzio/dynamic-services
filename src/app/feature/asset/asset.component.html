@@ -1,0 +1,9 @@
+<p>asset works!</p>
+
+<app-modal *ngIf="condition"></app-modal>
+
+<app-modal *ngIf="!condition"></app-modal>
+
+<button (click)="toggle()">Toggle</button>
+
+{{ condition | json }}
