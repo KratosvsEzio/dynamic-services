@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
 import { DriverComponent } from './driver.component';
@@ -12,4 +12,4 @@ const route: Route[] = [{ path: '', component: DriverComponent }];
   imports: [CommonModule, ModalModule, RouterModule.forChild(route)],
   declarations: [DriverComponent],
 })
-export class DriverModule {}
+export class DriverModule { }

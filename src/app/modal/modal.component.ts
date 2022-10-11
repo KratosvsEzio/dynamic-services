@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { AssetService } from '@service/asset.service';
 import { DynamicModalService } from '@modal/dynamic-modal.service';
 import { SERVICES } from '@modal/modal.factory';
+import { GatewayService } from '@service/gateway.service';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css'],
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  public name: string;
-  private sub: Subscription;
+  public name!: string;
+  private sub!: Subscription;
 
   constructor(
-    private assetService: AssetService,
+    private gatewayService: GatewayService,
     private dynamicModalService: DynamicModalService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.changeService();
@@ -25,14 +25,14 @@ export class ModalComponent implements OnInit {
 
   public changeService(): void {
     this.sub = this.dynamicModalService.activeService.subscribe(
-      (activeService) => {
+      (activeService: any) => {
         if (activeService == SERVICES.ASSET) {
-          this.assetService = this.assetService.asset;
+          this.gatewayService = this.gatewayService.asset;
         } else if (activeService == SERVICES.SENSOR) {
-          this.assetService = this.assetService.sensor;
+          this.gatewayService = this.gatewayService.sensor;
         }
 
-        this.name = this.assetService?.name;
+        this.name = this.gatewayService?.name;
       }
     );
   }

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
-export class AssetService {
-  public name: string = 'asset';
+@Injectable({
+  providedIn: 'root'
+})
+export class GatewayService {
+  public name: string = 'gateway';
   public asset: any;
   public sensor: any;
 
-  constructor() {}
+  constructor() { }
 
   public logger(): void {
     console.log('Logger =', this.name);

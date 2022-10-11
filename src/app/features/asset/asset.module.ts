@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
 import { AssetComponent } from './asset.component';
@@ -16,4 +16,4 @@ const route: Route[] = [{ path: '', component: AssetComponent }];
   declarations: [AssetComponent],
   providers: [modalFactory, DynamicModalService],
 })
-export class AssetModule {}
+export class AssetModule { }

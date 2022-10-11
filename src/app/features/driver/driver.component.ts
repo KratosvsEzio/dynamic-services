@@ -5,14 +5,14 @@ import { DynamicModalService } from '@modal/dynamic-modal.service';
 import { SERVICES } from '@modal/modal.factory';
 
 @Component({
-  selector: 'app-vehicle',
-  templateUrl: './vehicle.component.html',
-  styleUrls: ['./vehicle.component.css'],
+  selector: 'app-driver',
+  templateUrl: './driver.component.html',
+  styleUrls: ['./driver.component.scss'],
 })
-export class VehicleComponent implements OnInit {
+export class DriverComponent implements OnInit {
   constructor(private dynamicModalService: DynamicModalService) {
-    this.dynamicModalService.name = SERVICES.VEHICLE;
+    this.dynamicModalService.name = SERVICES.DRIVER;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
