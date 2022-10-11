@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicModalService } from '../modal/dynamic-modal.service';
-import { SERVICES } from '../modal/modal.factory';
+
+import { DynamicModalService } from '@modal/dynamic-modal.service';
+
+import { SERVICES } from '@modal/modal.factory';
 
 @Component({
   selector: 'app-vehicle',

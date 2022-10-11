@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalComponent } from './modal.component';
-import { modalFactory } from './modal.factory';
-import { DynamicModalService } from './dynamic-modal.service';
+
+import { ModalComponent } from '@modal/modal.component';
+
+import { modalFactory } from '@modal/modal.factory';
+import { DynamicModalService } from '@modal/dynamic-modal.service';
 
 @NgModule({
   imports: [CommonModule],

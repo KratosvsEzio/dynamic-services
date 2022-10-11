@@ -1,8 +1,8 @@
-import { AssetService } from '../../service/asset.service';
-import { DriverService } from '../../service/driver.service';
-import { SensorService } from '../../service/sensor.service';
-import { VehicleService } from '../../service/vehicle.service';
-import { DynamicModalService } from './dynamic-modal.service';
+import { AssetService } from '@service/asset.service';
+import { DriverService } from '@service/driver.service';
+import { SensorService } from '@service/sensor.service';
+import { VehicleService } from '@service/vehicle.service';
+import { DynamicModalService } from '@modal/dynamic-modal.service';
 
 export enum SERVICES {
   ASSET = 'asset',

@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DynamicModalService } from '../modal/dynamic-modal.service';
-import { SERVICES } from '../modal/modal.factory';
+
+import { DynamicModalService } from '@modal/dynamic-modal.service';
+
+import { SERVICES } from '@modal/modal.factory';
 
 @Component({
   selector: 'app-asset',
@@ -19,7 +21,9 @@ export class AssetComponent implements OnInit, OnDestroy {
 
   public toggle(): void {
     this.condition = !this.condition;
-    this.dynamicModalService.activeService = this.condition ? 'asset' : 'sensor';
+    this.dynamicModalService.activeService = this.condition
+      ? 'asset'
+      : 'sensor';
   }
 
   public ngOnDestroy(): void {

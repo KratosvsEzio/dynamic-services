@@ -1,14 +1,9 @@
-import {
-  AfterViewChecked,
-  AfterViewInit,
-  Component,
-  InjectionToken,
-  OnInit,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { AssetService } from '../../service/asset.service';
-import { DynamicModalService } from './dynamic-modal.service';
-import { SERVICES } from './modal.factory';
+
+import { AssetService } from '@service/asset.service';
+import { DynamicModalService } from '@modal/dynamic-modal.service';
+import { SERVICES } from '@modal/modal.factory';
 
 @Component({
   selector: 'app-modal',

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DriverComponent } from './driver.component';
-import { ModalModule } from '../modal/modal.module';
 import { Route, RouterModule } from '@angular/router';
+
+import { DriverComponent } from './driver.component';
+
+import { ModalModule } from '@modal/modal.module';
 
 const route: Route[] = [{ path: '', component: DriverComponent }];
 
